@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>2.6.3</version>
+		<relativePath/> <!-- lookup parent from repository -->
+	</parent>
+	<groupId>com.frt</groupId>
+	<artifactId>frt</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<name>frt</name>
+	<description>frt project for Spring Boot</description>
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>fastjson</artifactId>
+			<version>1.2.83</version>
+		</dependency>
+		<!--			<groupId>org.springframework.boot</groupId>-->
+<!--			<artifactId>spring-boot-buildpack-platform</artifactId>-->
+<!--			<version>2.6.4</version>-->
+<!--			<scope>runtime</scope>-->
+<!--		</dependency>-->
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<includeSystemScope>true</includeSystemScope>
+				</configuration>
+			</plugin>
+		</plugins>
+		<!--将lib下的文件打包到jar包里-->
+<!--		<resources>-->
+<!--			<resource>-->
+<!--				<directory>${project.basedir}/lib</directory>-->
+<!--				<targetPath>BOOT-INF/lib/</targetPath>-->
+<!--				<includes>-->
+<!--					<include>**/*.jar</include>-->
+<!--				</includes>-->
+<!--			</resource>-->
+<!--			<resource>-->
+<!--				<directory>src/main/resources</directory>-->
+<!--				<targetPath>BOOT-INF/classes/</targetPath>-->
+<!--				<includes>-->
+<!--					<include>**/*.properties</include>-->
+<!--					<include>**/*.yml</include>-->
+<!--					<include>**/*.js</include>-->
+<!--					<include>**/*.html</include>-->
+<!--				</includes>-->
+<!--			</resource>-->
+<!--		</resources>-->
+	</build>
+</project>
