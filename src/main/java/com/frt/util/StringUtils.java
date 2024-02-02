@@ -53,64 +53,7 @@ public class StringUtils {
     }
 
     /**
-     * 字符串转换成字符串数组，用英文逗号分组
-     * 只适用于英文逗号隔开的字符串，例："dwzq,dwjk"
-     * @param   str 字符串
-     * @return  字符串数组
-     */
-    public static String[] str2Array(String str) {
-        return str2Array(str, ",");
-    }
-
-    /**
-     * 根据指定分隔符处理字符串,转换成字符串数组
-     * @param str   字符串
-     * @param sep   分隔符
-     * @return      字符串数组
-     */
-    public static String[] str2Array(String str, String sep) {
-        StringTokenizer token = null;
-        String[] array = null;
-
-        // check
-        if (str == null || sep == null) {
-            return null;
-        }
-
-        // get string array
-        token = new StringTokenizer(str, sep);
-        array = new String[token.countTokens()];
-        for (int i = 0; token.hasMoreTokens(); i++) {
-            array[i] = token.nextToken();
-        }
-
-        return array;
-    }
-
-    /**
-     * String 数组转换成String
-     *
-     * @param str
-     * @return
-     */
-    public static String array2String(String[] str) {
-        int num = 0;
-        StringBuffer result = new StringBuffer("");
-        if (str == null) {
-            return "";
-        }
-        num = str.length;
-        for (int i = 0; i < num; i++) {
-            if (str[i] != null) {
-                result.append(str[i]);
-            }
-        }
-        return result.toString();
-    }
-
-    /**
      * 正则表达式匹配<br>
-     *
      * @param value
      * @param regexp
      * @return boolean
@@ -1017,13 +960,7 @@ public class StringUtils {
     }
 
     public static void main(String[] args) {
-        System.out.println("样例1:");
-        String[] strs =  str2Array("dwzq,dwjk");
-        System.out.println(Arrays.toString(strs));
-        System.out.println(strs.length);
-        System.out.println("样例2:");
-        String[] strs2 =  str2Array("dwzq|dwjk|dwjj","|");
-        System.out.println(Arrays.toString(strs2));
-        System.out.println(strs2.length);
+        String[] str = {"123", "456"};
+        System.out.println(String.join(";",str));
     }
 }
