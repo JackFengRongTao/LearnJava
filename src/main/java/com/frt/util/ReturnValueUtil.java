@@ -35,7 +35,16 @@ public class ReturnValueUtil {
         result.addProperty("note", note);
     }
 
+    /**
+     * 测试样例
+     */
     public static void main(String[] args) {
-        System.out.println(ReturnValueEnum.SUCCESS.getCode()+":"+ReturnValueEnum.SUCCESS.getNote());
+        //测试1
+        JsonObject rs = getGsonReturnValue(ReturnValueEnum.SUCCESS.getCode(),ReturnValueEnum.SUCCESS.getNote());
+        System.out.println("<---测试1--->\n"+rs.get("code")+":"+rs.get("note"));
+        //测试2
+        JsonObject rs1 = new JsonObject();
+        getGsonReturnValue(rs1,ReturnValueEnum.ADD_VOTE_RESULT_ERROR.getCode(), ReturnValueEnum.ADD_VOTE_RESULT_ERROR.getNote());
+        System.out.println("<---测试2--->\n"+rs1.get("code")+":"+rs1.get("note"));
     }
 }
