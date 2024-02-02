@@ -1,6 +1,6 @@
 package com.frt.util;
 
-import com.dwzq.common.enums.ReturnValueEnum;
+import com.frt.enums.ReturnValueEnum;
 import com.google.gson.JsonObject;
 
 /**
